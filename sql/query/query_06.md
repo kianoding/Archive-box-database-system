@@ -121,5 +121,3 @@ WHERE cr.Checkout_ID = 'CHK003';
 - ✅ OLD vs NEW row comparison
 - ✅ Cascading updates across 3 tables
 - ✅ Maintains data consistency automatically
-
----
