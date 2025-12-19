@@ -1,3 +1,5 @@
+## 📋 Advanced Workflows (Queries 8)
+
 ### Query 8: Patron Checkout Transaction
 
 **Scenario:** Graduate student David checks out ITEM007 (Japanese kimono) for costume design research. Librarian Emily processes the checkout as a single atomic transaction.
