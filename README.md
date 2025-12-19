@@ -22,6 +22,9 @@ Built using systematic database design principles from concept to working implem
 
 ## 📋 Schema Overview
 
+![V&A garment inventory photo: Image of a rack full of garment bags with image tag for each bag.](https://content.api.news/v3/images/bin/f4f71cf8ee82544704e98402494d9460?width=1024)
+*Image credit: Kelsey Kiantoro, 2025. ERD for Archive Box Database System.*
+
 **TIER 1: FOUNDATION TABLES**
 
 | Table Name | Description |
