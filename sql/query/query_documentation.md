@@ -33,7 +33,7 @@ This is a list of less complex queries for the day-to-day report:
 - Registering a new patron to the system
 - Deleting the older record of the archive temperature log
 
-→ [query_01_foundational_operation](../query/query_01_foundational_operation.md)
+→ [Query 01: Foundational Operation](../query/query_01_foundational_operation.md)
 
 ---
 
@@ -42,7 +42,7 @@ This is a list of queries with mid-level complexity for the daily operation repo
 - Updating the record for pick-up ready boxes
 - Preparing the report for the outbound shipping report
 
-→ [query_02_applied_operation](../query//query_02_applied_operational.md)
+→ [Query 02: Applied Operation](../query//query_02_applied_operational.md)
 
 ---
 ## 📋 Advanced Workflows (Queries 6-8)
