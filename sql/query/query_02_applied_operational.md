@@ -1,4 +1,4 @@
-## Applied Operations (Queries 4-5)
+## 📋 Applied Operations (Queries 4-5)
 
 ### Query 4: Update Box Location for Shipment
 
