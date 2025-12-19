@@ -1,6 +1,6 @@
 ## 📋 Applied Operations (Queries 4-5)
 
-### Query 4: Update Box Location for Shipment
+### Query 04: Update Box Location for Shipment
 
 **Scenario:** Archivist James prepares BOX008 (Middle Eastern textiles) for museum pickup, moving it to Outgoing Staging Room
 
@@ -47,7 +47,7 @@ WHERE b.Box_ID = 'BOX008';
 
 ---
 
-### Query 5: Record Box Shipment to External Institution
+### Query 05: Record Box Shipment to External Institution
 
 **Scenario:** James creates shipping record for BOX008 (Middle Eastern textile roll box) going to Smithsonian for exhibition
 
