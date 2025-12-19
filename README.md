@@ -11,7 +11,7 @@ The project demonstrates:
 Built using systematic database design principles from concept to working implementation, this project reflects graduate-level coursework in database systems.
 
 
-## Key Features
+## 🔑 Key Features
 
 * **Multi-Room Storage Management**: Tracks archive boxes and items across physical locations with capacity monitoring
 * **Environmental Monitoring**: Automated alerts for temperature/humidity violations to protect textile preservation
@@ -59,15 +59,14 @@ Built using systematic database design principles from concept to working implem
 | `CHECKOUT_RECORD` | Patron borrowing transactions |
 | `SHIPPING_RECORD` | External shipment tracking with loan periods |
 
-## 📖 Data Dictionary
-
+## 🗄️ Data Dictionary
 Comprehensive metadata documentation for all foundation tables, including attribute definitions, data types, and example values.
 
 **[→ View Complete Data Dictionary](data-dictionary.md)**
 
 ---
 
-## Sample Queries
+## 💬 Sample Queries
 
 This project includes **15+ complex queries** demonstrating advanced SQL techniques:
 - **Transaction Management**: Multi-step patron checkout with rollback handling
@@ -80,10 +79,33 @@ This project includes **15+ complex queries** demonstrating advanced SQL techniq
 
 *Queries organized by stakeholder role: Archivist, Librarian, Administrator, Conservator*
 
-## Technologies Used
+## ⚙️ Technologies Used
 
 - **Database**: MySQL 8.0
 - **Database Management Tool**: DBeaver, Postgresql, LucidChart for ERD Draft
 - **Design Methodology**: 
   - Entity-Relationship Modeling (Crow's Foot notation)
   - Normalization (3rd Normal Form)
+
+## ⚠️ Project Scope & Limitations
+
+### System Boundaries
+This database manages **physical box storage and movement only**. The detailed garment and textile collection catalog (item-level metadata, provenance, conservation history) is maintained in a separate Collection Management System (CMS/TMS).
+
+**This system handles:**
+- Box location tracking and capacity management
+- Patron checkout workflows
+- External shipping logistics
+- Environmental monitoring for storage areas
+
+**Out of scope:**
+- Detailed garment cataloging (fabric composition, measurements, maker attribution)
+- Digital asset management (high-resolution images, 3D scans)
+- Comprehensive provenance research
+- Detailed conservation treatment records
+
+**Known Limitations**
+- **Sample data only**: Database contains representative test data, not production-scale records
+- **Single-user context**: Designed for academic demonstration, not multi-user production environment
+- **Simplified workflows**: Some real-world archive processes are streamlined for clarity
+- **No authentication layer**: User management handled externally (not in database scope)
