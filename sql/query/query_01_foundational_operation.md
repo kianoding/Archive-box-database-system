@@ -1,6 +1,6 @@
 ## 📋 Foundation Operations (Queries 1-3)
 
-### Query 1: Record Environmental Temperature
+### Query 01: Record Environmental Temperature
 
 **Scenario:** Archivist records afternoon temperature and humidity reading in Archive Room 201
 
@@ -20,7 +20,7 @@ SELECT * FROM TEMP_RECORD;
 
 ---
 
-### Query 2: Register New Patron
+### Query 02: Register New Patron
 
 **Scenario:** Museum Studies graduate student Catherine Liu requests archive access
 
