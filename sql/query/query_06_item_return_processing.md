@@ -1,3 +1,6 @@
+---
+## 📋 Advanced Workflows (Queries 6)
+
 ### Query 6: Automated Item Return Processing
 
 **Scenario:** Patron Amanda returns ITEM011 to Librarian Lisa, triggering automated status updates across items and boxes
