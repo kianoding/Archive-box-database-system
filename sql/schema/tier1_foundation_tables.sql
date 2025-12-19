@@ -7,20 +7,8 @@
 -- Description: Core lookup tables and reference data
 -- =====================================================
 
--- Drop tables if they exist (for clean re-run)
-DROP TABLE IF EXISTS STAFF;
-DROP TABLE IF EXISTS BOX_SIZE_TYPE;
-DROP TABLE IF EXISTS CULTURAL_CLASS;
-DROP TABLE IF EXISTS ITEM_TYPE;
-DROP TABLE IF EXISTS PATRON_ROLE;
-DROP TABLE IF EXISTS MOVEMENT_TYPE;
-DROP TABLE IF EXISTS INSTITUTION_TYPE;
-DROP TABLE IF EXISTS CONDITION_TYPE;
-DROP TABLE IF EXISTS LOCATION;
-
 -- =====================================================
 -- TABLE 1: STAFF
--- Purpose: Archive personnel with role assignments
 -- =====================================================
 CREATE TABLE IF NOT EXISTS STAFF (
     staff_id INT NOT NULL PRIMARY KEY,
@@ -31,9 +19,8 @@ CREATE TABLE IF NOT EXISTS STAFF (
 
 -- =====================================================
 -- TABLE 2: BOX_SIZE_TYPE
--- Purpose: Physical dimensions for archive boxes
 -- =====================================================
-CREATE TABLE IF NOT EXISTS BOX_SIZE_TYPE (
+CREATE TABLE IF NOT EXISTS BOX_SIZE_TYPE(
     Box_Size_ID INT NOT NULL PRIMARY KEY,
     Size_Name VARCHAR(40),
     Width DECIMAL(6, 2),
@@ -44,9 +31,8 @@ CREATE TABLE IF NOT EXISTS BOX_SIZE_TYPE (
 
 -- =====================================================
 -- TABLE 3: CULTURAL_CLASS
--- Purpose: Cultural/geographic origin classifications
 -- =====================================================
-CREATE TABLE IF NOT EXISTS CULTURAL_CLASS (
+CREATE TABLE IF NOT EXISTS CULTURAL_CLASS(
     Classification_ID INT NOT NULL PRIMARY KEY,
     Classification_Name VARCHAR(40),
     Description VARCHAR(300)
@@ -54,9 +40,8 @@ CREATE TABLE IF NOT EXISTS CULTURAL_CLASS (
 
 -- =====================================================
 -- TABLE 4: ITEM_TYPE
--- Purpose: Garment and textile type categories
 -- =====================================================
-CREATE TABLE IF NOT EXISTS ITEM_TYPE (
+CREATE TABLE IF NOT EXISTS ITEM_TYPE(
     Item_Type_ID INT NOT NULL PRIMARY KEY,
     Item_Type_Name VARCHAR(40),
     Description VARCHAR(300)
@@ -64,9 +49,8 @@ CREATE TABLE IF NOT EXISTS ITEM_TYPE (
 
 -- =====================================================
 -- TABLE 5: PATRON_ROLE
--- Purpose: User access level definitions
 -- =====================================================
-CREATE TABLE IF NOT EXISTS PATRON_ROLE (
+CREATE TABLE IF NOT EXISTS PATRON_ROLE(
     Patron_Role_ID INT NOT NULL PRIMARY KEY,
     Role_Name ENUM('Student','Faculty','Researcher','Curator'),
     Description VARCHAR(300)
@@ -74,9 +58,8 @@ CREATE TABLE IF NOT EXISTS PATRON_ROLE (
 
 -- =====================================================
 -- TABLE 6: MOVEMENT_TYPE
--- Purpose: Box shipment/transfer classifications
 -- =====================================================
-CREATE TABLE IF NOT EXISTS MOVEMENT_TYPE (
+CREATE TABLE IF NOT EXISTS MOVEMENT_TYPE(
     Movement_Type_ID INT NOT NULL PRIMARY KEY,
     Movement_Type_Name VARCHAR(40),
     Description VARCHAR(300)
@@ -84,9 +67,8 @@ CREATE TABLE IF NOT EXISTS MOVEMENT_TYPE (
 
 -- =====================================================
 -- TABLE 7: INSTITUTION_TYPE
--- Purpose: External organization categories
 -- =====================================================
-CREATE TABLE IF NOT EXISTS INSTITUTION_TYPE (
+CREATE TABLE IF NOT EXISTS INSTITUTION_TYPE(
     Institution_Type_ID INT NOT NULL PRIMARY KEY,
     Ins_Type_Name VARCHAR(40),
     Description VARCHAR(300)
@@ -94,9 +76,8 @@ CREATE TABLE IF NOT EXISTS INSTITUTION_TYPE (
 
 -- =====================================================
 -- TABLE 8: CONDITION_TYPE
--- Purpose: Item preservation states with handling guidance
 -- =====================================================
-CREATE TABLE IF NOT EXISTS CONDITION_TYPE (
+CREATE TABLE IF NOT EXISTS CONDITION_TYPE(
     Condition_ID INT NOT NULL PRIMARY KEY,
     Condition_Name VARCHAR(50),
     Handling_Guidance VARCHAR(100),
@@ -106,9 +87,8 @@ CREATE TABLE IF NOT EXISTS CONDITION_TYPE (
 
 -- =====================================================
 -- TABLE 9: LOCATION
--- Purpose: Physical storage locations (building/room/shelf)
 -- =====================================================
-CREATE TABLE IF NOT EXISTS LOCATION (
+CREATE TABLE IF NOT EXISTS LOCATION(
     Location_ID INT NOT NULL PRIMARY KEY,
     Building VARCHAR(40),
     Room VARCHAR(40),
@@ -116,3 +96,7 @@ CREATE TABLE IF NOT EXISTS LOCATION (
     Shelf VARCHAR(5),
     Shelf_Row INT
 );
+
+-- =====================================================
+-- END OF TIER 1 FOUNDATION TABLES
+-- =====================================================
