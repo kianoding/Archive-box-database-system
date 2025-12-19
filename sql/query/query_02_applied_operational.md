@@ -1,101 +1,89 @@
-**Step 4: Execute Transaction (All-or-Nothing)**
-```sql
--- Ensure checkout is atomic - all steps succeed or none do
-START TRANSACTION;
+## Applied Operations (Queries 4-5)
 
--- STEP 1: Move box to study room
+### Query 4: Update Box Location for Shipment
+
+**Scenario:** Archivist James prepares BOX008 (Middle Eastern textiles) for museum pickup, moving it to Outgoing Staging Room
+
+**Business Need:** Track box movements and update availability status before external shipping
+
+**Data State Changes:**
+- Location: Archive Room 205 → Outgoing Staging Room
+- Status: Available → Unavailable
+- Staff: Updated by James (Staff ID 6)
+```sql
+-- Check current state
+SELECT * FROM STAFF;
+SELECT * FROM LOCATION;
+SELECT * FROM BOX_STATUS;
+SELECT * FROM BOX;
+
+-- James [6], the Archivist, prepares BOX008 for museum pickup
+-- Moving to Outgoing Staging Room [8] and changing status to unavailable [3]
 UPDATE BOX
-SET Location_ID = 6,  -- Study Room 208
-    Status_ID = 2,  -- Unavailable--Checked out
+SET Staff_id = 6,
+    Location_ID = 8,
+    Status_ID = 3,
     Last_Modified_Date = CURRENT_DATE
-WHERE Box_ID = 'BOX004';
+WHERE Box_ID = 'BOX008';
 
--- STEP 2: Update item status
-SELECT *
-FROM STAFF
-WHERE staff_fname = 'Emily';
-
-UPDATE ITEM_STATUS_NAME
-SET Item_Status_Name = 'Unavailable--Checked out',
-    Description = 'Item checked out to patron',
-    Staff_id = 3  -- Emily
-WHERE Item_ID = 'ITEM007';
-
--- STEP 3: Create checkout record
-INSERT INTO CHECKOUT_RECORD
-(Checkout_ID, Checkout_DateTime, Return_DateTime, Purpose, Staff_id, Box_ID, Item_ID, Patron_ID)
-VALUES
-('CHK006', '2024-12-13 10:30:00', NULL, 'Costume design reference', 3, 'BOX004', 'ITEM007', 4);
-
--- All steps succeeded - make changes permanent
-COMMIT;
+-- Verify update with multi-table JOIN
+SELECT 
+    b.Box_ID,
+    b.Last_Modified_Date,
+    bs.Status_Name,
+    l.Room AS Current_Location,
+    CONCAT(s.staff_fname, ' ', s.staff_lname) AS Updated_By
+FROM BOX b
+    JOIN BOX_STATUS bs ON b.Status_ID = bs.Status_ID
+    JOIN LOCATION l ON b.Location_ID = l.Location_ID
+    JOIN STAFF s ON b.Staff_id = s.staff_id
+WHERE b.Box_ID = 'BOX008';
 ```
 
-**Step 5: Verify Complete Transaction**
-```sql
--- Check checkout record created
-SELECT * FROM CHECKOUT_RECORD;
+**Technical Notes:**
+- Uses `CURRENT_DATE` for timestamp automation
+- Verification query demonstrates 4-table JOIN
+- Tracks accountability through Staff_id updates
 
--- Verify all related updates with comprehensive JOIN
+---
+
+### Query 5: Record Box Shipment to External Institution
+
+**Scenario:** James creates shipping record for BOX008 (Middle Eastern textile roll box) going to Smithsonian for exhibition
+
+**Business Need:** Track external loans with movement type, destination, and return expectations
+
+**Workflow Steps:**
+1. Verify movement type (Exhibition)
+2. Confirm box details by cultural classification
+3. Verify external institution (Smithsonian)
+4. Create shipping record with return due date
+```sql
+-- Check movement type: Exhibition [2]
+SELECT * FROM MOVEMENT_TYPE;
+
+-- Verify the Middle Eastern textile box [BOX008]
 SELECT
-    cr.Checkout_ID,
-    CONCAT(p.Patron_FName, ' ', p.Patron_LName) AS Patron,
-    i.Item_ID,
-    l.Room AS Box_Location
-FROM CHECKOUT_RECORD cr
-JOIN PATRON p ON cr.Patron_ID = p.Patron_ID
-JOIN ITEM i ON cr.Item_ID = i.Item_ID
-JOIN BOX b ON cr.Box_ID = b.Box_ID
-JOIN LOCATION l ON b.Location_ID = l.Location_ID
-WHERE cr.Checkout_ID = 'CHK006';
+    cc.Classification_Name,
+    b.Box_ID,
+    bst.Size_Name
+FROM BOX b
+    JOIN CULTURAL_CLASS cc ON b.Classification_ID = cc.Classification_ID
+    JOIN BOX_SIZE_TYPE bst ON b.Box_Size_ID = bst.Box_Size_ID
+WHERE cc.Classification_Name LIKE 'Middle%';
+
+-- Verify Smithsonian [3]
+SELECT * FROM EXTERNAL_LOCATION;
+
+-- Create shipping record
+INSERT INTO SHIPPING_RECORD 
+(Shipping_Record_ID, Movement_Date, Return_Due_Date, Actual_Return_Date, 
+ Box_ID, Movement_Type_ID, From_Location_ID, To_Location_ID, Staff_id)
+VALUES 
+(6, '2024-12-13', '2025-03-13', NULL, 'BOX008', 2, 2, 3, 6);
 ```
 
-**Technical Highlights:**
-- ✅ Transaction ensures atomicity (all-or-nothing execution)
-- ✅ Updates span 3 tables (BOX, ITEM_STATUS_NAME, CHECKOUT_RECORD)
-- ✅ Maintains referential integrity throughout
-- ✅ NULL for Return_DateTime indicates active checkout
-- ✅ Rollback capability if any step fails
-
-**Transaction Safety:**
-```sql
--- If any step fails, rollback example:
-START TRANSACTION;
--- ... steps ...
--- Error occurs
-ROLLBACK;  -- Undoes all changes
-```
-
----
-
-## Summary
-
-This query collection demonstrates:
-
-**Foundation Skills:**
-- Clean CRUD operations with verification steps
-- Proper foreign key relationship handling
-- Data integrity maintenance
-
-**Applied Skills:**
-- Multi-table JOINs for complex data retrieval
-- Real-world workflow implementation
-- Status tracking across related entities
-
-**Advanced Skills:**
-- Trigger-based automation for consistency
-- Nested subqueries for complex filtering
-- ACID transaction management
-- View optimization for recurring queries
-
-**Production-Ready Practices:**
-- Verification queries before and after operations
-- Clear commenting and stakeholder context
-- Atomic operations for data integrity
-- Automated workflows to reduce human error
-
----
-
-**Next Steps:** [View Complete SQL Files](sql/) | [Return to Main README](README.md)
-
-D
+**Technical Notes:**
+- Uses `NULL` for Actual_Return_Date (not yet returned)
+- 3-month loan period tracked
+- Links internal (From_Location_ID) and external (To_Location_ID) locations
