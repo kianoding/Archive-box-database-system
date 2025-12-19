@@ -59,4 +59,4 @@ This query collection demonstrates:
 | **Advanced Skills** | • Stored procedure design (TRIGGER automation)<br>• 3-level nested subquery logic<br>• ACID transaction implementation<br>• VIEW creation for query optimization<br>• Cascading update patterns<br>• Error handling and rollback capability | [Query 06: Item Return Processing](../query/query_6_item_return_processing.md)<br>[Query 07: Available Items Check](../query/query_7_available_items_check.md)<br>[Query 08: Checkout Transaction](../query/query_8_checkout_transaction.md) |
 
 
-**Next Steps:** [View Complete SQL Files](../query) | [Return to Main README](../README.md)
+**Next Steps:** [View Complete SQL Files](../query) | [Return to Main README](/README.md)
