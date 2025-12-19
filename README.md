@@ -59,9 +59,13 @@ Built using systematic database design principles from concept to working implem
 | `CHECKOUT_RECORD` | Patron borrowing transactions |
 | `SHIPPING_RECORD` | External shipment tracking with loan periods |
 
+## 📖 Data Dictionary
+
+Comprehensive metadata documentation for all foundation tables, including attribute definitions, data types, and example values.
+
+**[→ View Complete Data Dictionary](data_dictionary.md)**
+
 ---
-
-
 
 ## Sample Queries
 
