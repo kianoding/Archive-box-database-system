@@ -22,9 +22,21 @@ Built using systematic database design principles from concept to working implem
 
 ## 📋 Schema Overview
 
-![V&A garment inventory photo: Image of a rack full of garment bags with image tag for each bag.](https://content.api.news/v3/images/bin/f4f71cf8ee82544704e98402494d9460?width=1024)
+This database serves four primary user groups within the university archive:
+
+| Stakeholder | Primary Responsibilities | Key Database Interactions |
+|-------------|-------------------------|---------------------------|
+| **Archivists** | Collection management, item processing, box organization | Catalog items, assign boxes, update locations, monitor conditions |
+| **Librarians** | Patron services, checkout management, search assistance | Process patron requests, manage checkouts/returns, search collection |
+| **Administrators** | Operations oversight, reporting, capacity planning | Generate reports, monitor space utilization, track shipments |
+| **Conservators** | Preservation assessment, environmental monitoring, condition tracking | Record condition assessments, monitor environmental readings, flag preservation needs |
+
+**Database Design Principle:** The three-tier structure ensures data integrity through dependency management while supporting diverse stakeholder workflows—from day-to-day patron checkouts to long-term preservation monitoring.
+
+![ERD Map](https://github.com/kianoding/Archive-box-database-system/blob/main/Archive%20Boxes.png?raw=true)
 *Image credit: Kelsey Kiantoro, 2025. ERD for Archive Box Database System.*
 
+---
 **TIER 1: FOUNDATION TABLES**
 
 | Table Name | Description |
