@@ -2,23 +2,9 @@ remote_theme: just-the-docs/just-the-docs
 title: Archive Box Management Database
 description: Graduate database design project
 
-# Enable search
 search_enabled: true
-
-# LEFT SIDEBAR: Repository navigation
 nav_enabled: true
 
-# RIGHT SIDEBAR: On-page table of contents for headers
-# Enable this globally
-aux_links_new_tab: false
-
-# Default settings for all pages
-defaults:
-  - scope:
-      path: ""
-    values:
-      layout: default
-      nav_enabled: true
 
 # Footer content
 footer_content: "Created by Kelsey Kiantoro | Graduate Database Design Project (Fall 2024) | Built with Just the Docs"
