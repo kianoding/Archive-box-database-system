@@ -1,4 +1,3 @@
----
 ## 📋 Advanced Workflows (Queries 6)
 
 ### Query 6: Automated Item Return Processing
