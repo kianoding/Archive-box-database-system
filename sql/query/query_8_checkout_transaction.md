@@ -1,11 +1,11 @@
-### Query 8: Patron Checkout Transaction
+### Query 08: Patron Checkout Transaction
 
 **Scenario:** Graduate student David checks out ITEM007 (Japanese kimono) for costume design research. Librarian Emily processes the checkout as a single atomic transaction.
 
 **Business Need:** Ensure all checkout steps succeed together or roll back entirely to prevent data inconsistency
 
 **ACID Transaction Components:**
-- **Atomicity:** All 3 steps succeed or none do
+- **Atomicity:** All three steps succeed or none do
 - **Consistency:** Maintains referential integrity across tables
 - **Isolation:** Prevents concurrent checkout conflicts
 - **Durability:** Changes persist after COMMIT
