@@ -14,20 +14,26 @@ This document showcases SQL query development for the Archive Box Management Dat
 
 ## Query Overview
 
-| Query | Business Scenario | Stakeholder | SQL Techniques | Complexity |
-|-------|-------------------|-------------|----------------|------------|
-| Q1 | Record environmental readings | Archivist | INSERT, SELECT verification | ⭐ |
-| Q2 | Register new patron | Librarian | INSERT, SELECT verification | ⭐ |
-| Q3 | Remove duplicate records | Administrator | DELETE, data cleanup | ⭐ |
-| Q4 | Update box for shipment | Archivist | UPDATE with JOINs, multi-table verification | ⭐⭐ |
-| Q5 | Track external shipment | Archivist | INSERT with FK relationships, complex SELECT | ⭐⭐ |
-| Q6 | Process item return | Librarian | TRIGGER, cascading updates, automated workflow | ⭐⭐⭐ |
-| Q7 | Check available items | Patron/Librarian | VIEW creation, nested SUBQUERIES (3 levels) | ⭐⭐⭐⭐ |
-| Q8 | Patron checkout transaction | Librarian | TRANSACTION (ACID), multi-step workflow | ⭐⭐⭐⭐⭐ |
+| Query | Business Scenario | Stakeholder | SQL Techniques | Complexity | Level | 
+|-------|-------------------|-------------|----------------|------------|------------|
+| Q1 | Record environmental readings | Archivist | INSERT, SELECT verification | ⭐ | Foundation |
+| Q2 | Register new patron | Librarian | INSERT, SELECT verification | ⭐ | Foundation |
+| Q3 | Remove duplicate records | Administrator | DELETE, data cleanup | ⭐ | Foundation |
+| Q4 | Update box for shipment | Archivist | UPDATE with JOINs, multi-table verification | ⭐⭐ | Applied Operations |
+| Q5 | Track external shipment | Archivist | INSERT with FK relationships, complex SELECT | ⭐⭐ | Applied Operations |
+| Q6 | Process item return | Librarian | TRIGGER, cascading updates, automated workflow | ⭐⭐⭐ | Advanced |
+| Q7 | Check available items | Patron/Librarian | VIEW creation, nested SUBQUERIES (3 levels) | ⭐⭐⭐⭐ | Advanced |
+| Q8 | Patron checkout transaction | Librarian | TRANSACTION (ACID), multi-step workflow | ⭐⭐⭐⭐⭐ | Advanced |
 
 ---
 
 ## Foundation Operations (Queries 1-3)
+This is a list of less complex queries for the day-to-day report.
+- Recording the temperature and humidity in the archive room
+- Registering a new patron to the system
+- Deleting the older record of the archive temperature log
+
+→ [query_01_foundational_operation.sql]()
 
 ### Query 1: Record Environmental Temperature
 
