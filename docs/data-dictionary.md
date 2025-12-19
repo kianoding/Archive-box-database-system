@@ -9,7 +9,7 @@ The data dictionary serves as the authoritative reference for:
 - **Archivists and librarians** understanding data structure
 - **Stakeholders** reviewing system capabilities
 
-[📁 Sample Data Intro](../sample_data/sample_data_intro.md) to see realistic examples of these tables in use.
+[📁 sample_data_documentation.md](/docs/sample_data_documentation.md) to see realistic examples of these tables in use.
 
 ---
 TIER 1: PARENT ENTITY
