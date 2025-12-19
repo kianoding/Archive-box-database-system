@@ -11,7 +11,7 @@ The sample data demonstrates:
 - Cultural classification diversity
 - Various item condition states
 
-[📖 Data Dictionary](main/sql/schema/data-dictionary.md) for detailed attribute specifications and metadata standards.
+[📖 Data Dictionary](../sql/schema/data-dictionary.md) for detailed attribute specifications and metadata standards.
 
 ## Data Characteristics
 
