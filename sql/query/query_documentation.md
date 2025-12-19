@@ -33,7 +33,7 @@ This is a list of less complex queries for the day-to-day report.
 - Registering a new patron to the system
 - Deleting the older record of the archive temperature log
 
-→ [query_01_foundational_operation](sql/query/query_01_foundational_operation.md)
+→ [query_01_foundational_operation](../../query_01_foundational_operation.md)
 ---
 
 ## Applied Operations (Queries 4-5)
