@@ -1,3 +1,5 @@
+## 📋 Foundation Operations (Queries 1-3)
+
 ### Query 1: Record Environmental Temperature
 
 **Scenario:** Archivist records afternoon temperature and humidity reading in Archive Room 201
