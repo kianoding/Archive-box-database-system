@@ -111,7 +111,7 @@ This project includes **15+ complex queries** demonstrating advanced SQL techniq
 - **View-Based Operations**: Complex joins for stakeholder-specific data access
 - **Conditional Logic**: Environmental monitoring with alert thresholds
 
-**📋 [View Complete Query Documentation →](link-to-queries-page.md)**
+**📋 [View Complete Query Documentation →](sql/query/query_documentation.md)**
 
 *Queries organized by stakeholder role: Archivist, Librarian, Administrator, Conservator*
 
