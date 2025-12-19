@@ -7,11 +7,6 @@ has_toc: true
 
 
 # Archive-box-database-system 📦👘🔍
-{: .no_toc .text-delta }
-
-1. TOC
-{:toc}
-
 ---
 ## Overview
 
