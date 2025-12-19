@@ -25,13 +25,6 @@ This document showcases SQL query development for the Archive Box Management Dat
 | Q7 | Check available items | Patron/Librarian | VIEW creation, nested SUBQUERIES (3 levels) | ⭐⭐⭐⭐ |
 | Q8 | Patron checkout transaction | Librarian | TRANSACTION (ACID), multi-step workflow | ⭐⭐⭐⭐⭐ |
 
-**Technical Highlights:**
-- ✅ Transaction Management (ACID compliance)
-- ✅ Trigger-based Automation
-- ✅ Nested Subqueries (3 levels deep)
-- ✅ View Optimization for recurring queries
-- ✅ Referential Integrity across 19 tables
-
 ---
 
 ## Foundation Operations (Queries 1-3)
