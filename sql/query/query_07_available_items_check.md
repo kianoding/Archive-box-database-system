@@ -1,3 +1,5 @@
+## 📋 Advanced Workflows (Queries 6)
+
 ### Query 7: Check Available Items for Patron Checkout
 
 **Scenario:** Librarian Emily creates a filtered view of items safe for patron checkout, excluding items requiring conservation
@@ -9,7 +11,7 @@
 #### Query Logic Flow
 ```
 ┌─────────────────────────────────────────────┐
-│  Start: Emily needs available item list     │
+│  Start: Emily needs the available item list     │
 └──────────────────┬──────────────────────────┘
                    │
          ┌─────────▼──────────┐
