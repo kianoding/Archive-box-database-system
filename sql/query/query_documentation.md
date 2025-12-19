@@ -24,7 +24,6 @@ This document showcases SQL query development for the Archive Box Management Dat
 | Q8 | Patron checkout transaction | Librarian | TRANSACTION (ACID), multi-step workflow | ⭐⭐⭐⭐⭐ | Advanced |
 
 ---
-
 ## 📋 Foundation Operations (Queries 1-3)
 This is a list of less complex queries for the day-to-day report:
 - Recording the temperature and humidity in the archive room
@@ -34,7 +33,6 @@ This is a list of less complex queries for the day-to-day report:
 → [Query 01: Foundational Operation](../query/query_01_foundational_operation.md)
 
 ---
-
 ## 📋 Applied Operations (Queries 4-5)
 This is a list of queries with mid-level complexity for the daily operation report:
 - Updating the record for pick-up ready boxes
@@ -55,13 +53,11 @@ This is a list of production-ready queries demonstrating complex SQL techniques 
 
 This query collection demonstrates:
 
-
 | Group | Purpose | SQL Techniques | 
 |-------|-------------------|-------------|
 | **Foundation Skills** | • Clean CRUD operations with verification steps <br>• Proper foreign key relationship handling <br>• Data integrity maintenance | [Query 01: Foundational Operation](../query/query_01_foundational_operation.md) | 
 | **Applied Skills:** | • Multi-table JOINs for complex data retrieval <br>• Real-world workflow implementation <br>• Status tracking across related entities | [Query 02: Applied Operation](../query//query_02_applied_operational.md) | 
 | **Advanced Skills:** | • Trigger-based automation for consistency <br>• Nested subqueries for complex filtering <br>• ACID transaction management <br>• View optimization for recurring queries | [Query 06: Item Return Processing](../query/query_6_item_return_processing.md)<br> [Query 07: Available Items Check](../query/query_7_available_items_check.md)<br> [Query 08: Checkout Transaction](../query/query_8_checkout_transaction.md) | 
 
----
 
 **Next Steps:** [View Complete SQL Files](sql/) | [Return to Main README](README.md)
