@@ -27,24 +27,24 @@ This document showcases SQL query development for the Archive Box Management Dat
 
 ---
 
-## 1️⃣ Foundation Operations (Queries 1-3)
+## 📋 Foundation Operations (Queries 1-3)
 This is a list of less complex queries for the day-to-day report:
 - Recording the temperature and humidity in the archive room
 - Registering a new patron to the system
 - Deleting the older record of the archive temperature log
 
-→ [query_01_foundational_operation](../query//query_02_applied_operational.md)
+→ [query_01_foundational_operation](../query/query_01_foundational_operation.md)
 
 ---
 
 
 
-## 2️⃣ Applied Operations (Queries 4-5)
+## 📋 Applied Operations (Queries 4-5)
 This is a list of queries with mid-level complexity for the daily operation report:
 - Updating the record for pick-up ready boxes
 - Preparing the report for outbound shipping report
 
-→ [query_02_applied_operation](../query/query_01_foundational_operation.md)
+→ [query_02_applied_operation](../query//query_02_applied_operational.md)
 
 ---
 
