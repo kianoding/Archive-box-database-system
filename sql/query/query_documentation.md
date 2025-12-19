@@ -46,36 +46,21 @@ This is a list of queries with mid-level complexity for the daily operation repo
 ## 📋 Advanced Workflows (Queries 6-8)
 This is a list of production-ready queries demonstrating complex SQL techniques for automated workflows, nested logic, and transaction management:
 
-→ [Query 6: Item Return Processing](../query/query_6_item_return_processing.md)\
-→ [Query 7: Available Items Check](../query/query_7_available_items_check.md)\
-→ [Query 8: Checkout Transaction](../query/query_8_checkout_transaction.md)
+→ [Query 06: Item Return Processing](../query/query_6_item_return_processing.md)\
+→ [Query 07: Available Items Check](../query/query_7_available_items_check.md)\
+→ [Query 08: Checkout Transaction](../query/query_8_checkout_transaction.md)
 
 
 ## Summary
 
 This query collection demonstrates:
 
-**Foundation Skills:**
-- Clean CRUD operations with verification steps
-- Proper foreign key relationship handling
-- Data integrity maintenance
 
-**Applied Skills:**
-- Multi-table JOINs for complex data retrieval
-- Real-world workflow implementation
-- Status tracking across related entities
-
-**Advanced Skills:**
-- Trigger-based automation for consistency
-- Nested subqueries for complex filtering
-- ACID transaction management
-- View optimization for recurring queries
-
-**Production-Ready Practices:**
-- Verification queries before and after operations
-- Clear commenting and stakeholder context
-- Atomic operations for data integrity
-- Automated workflows to reduce human error
+| Group | Purpose | SQL Techniques | 
+|-------|-------------------|-------------|
+| **Foundation Skills** | • Clean CRUD operations with verification steps <br>• Proper foreign key relationship handling <br>• Data integrity maintenance | [Query 01: Foundational Operation](../query/query_01_foundational_operation.md) | 
+| **Applied Skills:** | • Multi-table JOINs for complex data retrieval <br>• Real-world workflow implementation <br>• Status tracking across related entities | [Query 02: Applied Operation](../query//query_02_applied_operational.md) | 
+| **Advanced Skills:** | • Trigger-based automation for consistency <br>• Nested subqueries for complex filtering <br>• ACID transaction management <br>• View optimization for recurring queries | [Query 06: Item Return Processing](../query/query_6_item_return_processing.md)<br> [Query 07: Available Items Check](../query/query_7_available_items_check.md)<br> [Query 08: Checkout Transaction](../query/query_8_checkout_transaction.md) | 
 
 ---
 
