@@ -1,4 +1,4 @@
-## 📋 Advanced Workflows (Queries 6)
+## 📋 Advanced Workflows (Queries 7)
 
 ### Query 7: Check Available Items for Patron Checkout
 
