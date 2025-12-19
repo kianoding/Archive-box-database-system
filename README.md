@@ -56,6 +56,7 @@ This database serves four primary user groups within the university archive:
 **TIER 2: DEPENDENT TABLES**
 
 **Dependencies:** Tier 1  
+
 | Table Name | Description |
 |------------|-------------|
 | `BOX_STATUS` | Box availability states tracked by staff |
@@ -66,6 +67,7 @@ This database serves four primary user groups within the university archive:
 
 **TIER 3: CORE OPERATIONAL TABLES**
 **Dependencies:** Tiers 1 & 2  
+
 | Table Name | Description |
 |------------|-------------|
 | `BOX` | Archive box records with location and status |
