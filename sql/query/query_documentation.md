@@ -42,7 +42,7 @@ This is a list of less complex queries for the day-to-day report:
 ## Applied Operations (Queries 4-5)
 This is a list of queries with mid-level complexity for the daily operation report:
 - Updating the record for pick-up ready boxes
-- Preparing the report for outbound shippoing report
+- Preparing the report for outbound shipping report
 
 → [query_02_applied_operation](../query/query_01_foundational_operation.md)
 
@@ -59,7 +59,7 @@ This is a list of queries with mid-level complexity for the daily operation repo
 **Automation Logic:**
 - ✅ When Return_DateTime is recorded → Trigger fires
 - ✅ Item status: "Unavailable--Checked out" → "Available"
-- ✅ Box status: Updates to "Available" when all items returned
+- ✅ Box status: Updates to "Available" when all items are returned
 - ✅ Box location: Returns to archive storage automatically
 
 #### Workflow Diagram
