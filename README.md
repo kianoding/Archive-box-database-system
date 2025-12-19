@@ -98,7 +98,7 @@ This database serves four primary user groups within the university archive:
 ## 🗄️ Data Dictionary
 Comprehensive metadata documentation for all foundation tables, including attribute definitions, data types, and example values.
 
-**[→ View Complete Data Dictionary](data-dictionary.md)**
+**[→ View Complete Data Dictionary](sql/schema/data-dictionary.md)**
 
 ---
 
