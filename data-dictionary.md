@@ -2,6 +2,15 @@
 This document provides detailed metadata specifications for the Archive Box Management Database foundation tables (Tier 1). Each entry follows library and information science metadata standards, documenting attributes, data types, constraints, and contextual examples.
 
 ## Purpose
+
+The data dictionary serves as the authoritative reference for:
+- **Database administrators** implementing the schema
+- **Developers** querying the database
+- **Archivists and librarians** understanding data structure
+- **Stakeholders** reviewing system capabilities
+
+---
+TIER 1: PARENT ENTITY
 ### `STAFF`
 **Purpose:** Archive personnel managing collection operations
 
