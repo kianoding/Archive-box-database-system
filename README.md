@@ -106,6 +106,77 @@ This database manages **physical box storage and movement only**. The detailed g
 
 **Known Limitations**
 - **Sample data only**: Database contains representative test data, not production-scale records
-- **Single-user context**: Designed for academic demonstration, not multi-user production environment
+- **Single-user context**: Designed for academic demonstration, not a multi-user production environment
 - **Simplified workflows**: Some real-world archive processes are streamlined for clarity
 - **No authentication layer**: User management handled externally (not in database scope)
+
+## 📂 Repository Structure
+```
+archive-box-management-database/
+│
+├── sql/                                # Database implementation scripts
+│   ├── schema/                         # Table creation scripts organized by tier
+│   │   ├── tier1_foundation_tables.sql
+│   │   ├── tier2_dependent_tables.sql
+│   │   └── tier3_operational_tables.sql
+│   ├── triggers/                       # Automated workflow triggers
+│   │   ├── checkout_triggers.sql
+│   │   ├── shipment_triggers.sql
+│   │   └── status_cascade_triggers.sql
+│   └── sample_data/                    # Insert statements for test data
+│       ├── tier1_sample_data.sql
+│       ├── tier2_sample_data.sql
+│       └── tier3_sample_data.sql
+│
+├── queries/                            # Stakeholder query scenarios
+│   ├── archivist_queries.sql           # Checkout, shipping, location queries
+│   ├── librarian_queries.sql           # Search, availability, patron queries
+│   ├── administrator_queries.sql       # Reporting, analytics, capacity queries
+│   └── conservator_queries.sql         # Condition, environmental monitoring queries
+│
+├── docs/                               # Project documentation
+│   ├── DATA_DICTIONARY.md              # Detailed metadata for Tier 1 tables
+│   ├── QUERY_DOCUMENTATION.md          # Query scenarios and explanations
+│   └── images/                         # Visual documentation
+│       ├── erd_diagram.png             # Entity-Relationship Diagram
+│       └── workflow_diagrams/          # Process flow visualizations
+│
+├── README.md                           # Project overview and documentation
+└── .gitignore                          # Git ignore configuration
+```
+
+
+## 📄 License
+
+This project is provided for **educational and portfolio review purposes only**.
+
+### Usage Restrictions:
+* This database system may NOT be used in any production environment without express written permission
+* Commercial use requires explicit authorization from the author
+* Academic study, review, and educational use is permitted
+* Modifications for production deployment require author permission
+
+For permission requests or inquiries, please contact the author.
+
+---
+
+## 🌟 Author
+
+**Kelsey Kiantoro**  
+A graduate student in Library and Information Science with an interest in database systems and information architecture. I specialize in translating complex organizational needs into systematic database solutions, with a particular interest in archival systems, metadata standards, and data-driven collection management.
+
+This project represents my work in mastering database design principles—from conceptual ERD modeling through production-ready MySQL implementation with automated workflows and triggers.
+
+
+*Developed as the final project for INFO639: Database Design (Fall 2024)*
+
+---
+
+## 🙏 Acknowledgments
+
+* **Course Instructor:** Dr. Monica G. Maceli, Ph.D. - [monicamaceli.com](https://monicamaceli.com/)
+* **Tools:** MySQL 8.0, DBeaver Community Edition
+* **Methodologies:** E.F. Codd's relational model principles, systematic normalization approach
+* **Design Inspiration:** Real-world university archive collection management workflows
+
+Special thanks to Dr. Maceli for guidance on database design principles, normalization techniques, and fostering a rigorous approach to systematic database development.
