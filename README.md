@@ -63,7 +63,7 @@ Built using systematic database design principles from concept to working implem
 
 Comprehensive metadata documentation for all foundation tables, including attribute definitions, data types, and example values.
 
-**[→ View Complete Data Dictionary](data_dictionary.md)**
+**[→ View Complete Data Dictionary](data-dictionary.md)**
 
 ---
 
