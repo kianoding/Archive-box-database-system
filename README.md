@@ -52,7 +52,7 @@ This database serves four primary user groups within the university archive:
 
 **Database Design Principle:** The three-tier structure ensures data integrity through dependency management while supporting diverse stakeholder workflows—from day-to-day patron checkouts to long-term preservation monitoring.
 
-![ERD Map](sql/schema/ERD-archive-boxes.png)
+![ERD Map](/docs/images/ERD-archive-boxes.png)
 *Image credit: Kelsey Kiantoro, 2025. ERD for Archive Box Database System.*
 
 ---
