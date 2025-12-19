@@ -17,9 +17,9 @@ has_toc: true
 
 ---
 
-## Overview
+## 📖 Overview
 
-### 📖 Archive Box Management Database: Garment and Textile Overview
+### Archive Box Management Database: Garment and Textile
 This project showcases a complete relational database design for managing a university's garment and textile archive collection. The system handles archive operations, including storage tracking, patron checkouts, environmental monitoring, and item preservation across multiple storage rooms.
 The project demonstrates:
 
@@ -186,7 +186,7 @@ archive-box-management-database/
 
 This project is provided for **educational and portfolio review purposes only**.
 
-### Usage Restrictions:
+### Usage Restrictions
 * This database system may NOT be used in any production environment without express written permission
 * Commercial use requires explicit authorization from the author
 * Academic study, review, and educational use is permitted
