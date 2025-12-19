@@ -50,14 +50,13 @@ This is a list of production-ready queries demonstrating complex SQL techniques 
 
 
 ## Summary
-
 This query collection demonstrates:
 
-| Group | Purpose | SQL Techniques | 
-|-------|-------------------|-------------|
-| **Foundation Skills** | • Clean CRUD operations with verification steps <br>• Proper foreign key relationship handling <br>• Data integrity maintenance | [Query 01: Foundational Operation](../query/query_01_foundational_operation.md) | 
-| **Applied Skills:** | • Multi-table JOINs for complex data retrieval <br>• Real-world workflow implementation <br>• Status tracking across related entities | [Query 02: Applied Operation](../query//query_02_applied_operational.md) | 
-| **Advanced Skills:** | • Trigger-based automation for consistency <br>• Nested subqueries for complex filtering <br>• ACID transaction management <br>• View optimization for recurring queries | [Query 06: Item Return Processing](../query/query_6_item_return_processing.md)<br> [Query 07: Available Items Check](../query/query_7_available_items_check.md)<br> [Query 08: Checkout Transaction](../query/query_8_checkout_transaction.md) | 
+| Skill Level | Technical Capabilities Demonstrated | Queries |
+|-------------|-------------------------------------|---------|
+| **Foundation Skills** | • INSERT/DELETE operations with data validation<br>• Foreign key constraint handling<br>• SELECT verification patterns<br>• Single-table CRUD proficiency | [Query 01: Foundational Operation](../query/query_01_foundational_operation.md) |
+| **Applied Skills** | • Multi-table JOIN optimization (4+ tables)<br>• UPDATE with referential integrity<br>• Complex SELECT with FK relationships<br>• Data consistency across related entities | [Query 02: Applied Operation](../query/query_02_applied_operational.md) |
+| **Advanced Skills** | • Stored procedure design (TRIGGER automation)<br>• 3-level nested subquery logic<br>• ACID transaction implementation<br>• VIEW creation for query optimization<br>• Cascading update patterns<br>• Error handling and rollback capability | [Query 06: Item Return Processing](../query/query_6_item_return_processing.md)<br>[Query 07: Available Items Check](../query/query_7_available_items_check.md)<br>[Query 08: Checkout Transaction](../query/query_8_checkout_transaction.md) |
 
 
 **Next Steps:** [View Complete SQL Files](sql/) | [Return to Main README](README.md)
