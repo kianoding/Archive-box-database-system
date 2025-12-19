@@ -8,8 +8,6 @@ nav_order: 4
 
 This document showcases SQL query development for the Archive Box Management Database, demonstrating progression from basic CRUD operations to complex transaction management and automated workflows.
 
-**Related:** [📖 Data Dictionary](../sql/schema/data-dictionary.md) | [View Schema](../sql/schema/)
-
 ---
 
 ## 💬 Query Overview
