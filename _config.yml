@@ -1,3 +1,12 @@
-theme: jekyll-theme-cayman
+remote_theme: just-the-docs/just-the-docs
 title: Archive Box Management Database
-description: Graduate database design project - Relational database design and implementation
+description: Graduate database design project
+
+# Enable search
+search_enabled: true
+
+# Sidebar navigation
+nav_enabled: true
+
+# Color scheme
+color_scheme: light
