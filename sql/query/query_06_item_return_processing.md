@@ -4,7 +4,12 @@
 
 **Scenario:** Patron Amanda returns ITEM011 to Librarian Lisa, triggering automated status updates across items and boxes
 
-**Business Need:** Ensure consistent status updates when items return to the archive, reduce manual errors
+**Business Need:** Ensure consistent status updates when items return to the archive, and reduce manual errors
+
+#### Workflow Diagram
+
+![workflow mapping for query 06](/docs/images/workflow-map-query-06.jpg)
+
 
 **Automation Logic:**
 - ✅ When Return_DateTime is recorded → Trigger fires
@@ -12,41 +17,6 @@
 - ✅ Box status: Updates to "Available" when all items are returned
 - ✅ Box location: Returns to archive storage automatically
 
-#### Workflow Diagram
-```
-┌─────────────┐         ┌──────────────┐         ┌─────────────┐
-│   Patron    │         │  Librarian   │         │   System    │
-└──────┬──────┘         └──────┬───────┘         └──────┬──────┘
-       │                       │                        │
-       │  Returns Item         │                        │
-       │──────────────────────>│                        │
-       │                       │                        │
-       │                       │ Records Return         │
-       │                       │ (UPDATE Return_DateTime)│
-       │                       │───────────────────────>│
-       │                       │                        │
-       │                       │              ┌─────────▼────────┐
-       │                       │              │ TRIGGER FIRES    │
-       │                       │              │ auto_process_    │
-       │                       │              │ item_return      │
-       │                       │              └─────────┬────────┘
-       │                       │                        │
-       │                       │              ┌─────────▼────────┐
-       │                       │              │ Update Item      │
-       │                       │              │ Status:Available │
-       │                       │              └─────────┬────────┘
-       │                       │                        │
-       │                       │              ┌─────────▼────────┐
-       │                       │              │ Update Box       │
-       │                       │              │ Status: Available│
-       │                       │              │ Location: Archive│
-       │                       │              └─────────┬────────┘
-       │                       │                        │
-       │                       │<───────────────────────│
-       │                       │  Confirmation          │
-       │<──────────────────────│                        │
-       │  Item Available       │                        │
-```
 
 #### Implementation
 
