@@ -1,3 +1,11 @@
+---
+layout: default
+title: "Q8: Checkout Transaction"
+parent: Query Documentation
+nav_order: 5
+---
+```
+
 ## 📋 Advanced Workflows (Queries 8)
 
 ### Query 8: Patron Checkout Transaction
