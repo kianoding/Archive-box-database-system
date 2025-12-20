@@ -109,4 +109,17 @@ START TRANSACTION;
 ROLLBACK;  -- Undoes all changes
 ```
 
----
+### Results
+
+### Checkout Record
+
+| Checkout_ID | Checkout_DateTime | Return_DateTime | Purpose | Staff_id | Box_ID | Item_ID | Patron_ID |
+|-------------|-------------------|-----------------|---------|----------|--------|---------|-----------|
+| CHK001 | 2024-12-01 09:30:00 | 2024-12-01 14:45:00 | Research for dissertation on 19th century fashion | 2 | BOX002 | ITEM003 | 1 |
+| CHK002 | 2024-11-20 10:00:00 | 2024-11-20 15:30:00 | Textile analysis for course material | 3 | BOX003 | ITEM005 | 2 |
+| CHK003 | 2024-12-12 13:00:00 | 2024-12-13 16:00:00 | Museum exhibition research (currently in study room) | 5 | BOX006 | ITEM011 | 3 |
+| CHK004 | 2024-12-05 11:15:00 | 2024-12-05 16:00:00 | Costume design reference for theater production | 1 | BOX007 | ITEM013 | 4 |
+| CHK005 | 2024-11-15 14:30:00 | 2024-11-15 17:00:00 | Cultural heritage documentation project | 6 | BOX010 | ITEM019 | 5 |
+| CHK006 | 2024-12-13 10:30:00 | NULL | Costume design reference | 3 | BOX004 | ITEM007 | 4 |
+
+**Note:** CHK006 shows NULL Return_DateTime, indicating an active checkout (not yet returned)
