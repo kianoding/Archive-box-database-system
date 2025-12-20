@@ -1,4 +1,10 @@
-# 📁 Sample Data
+---
+layout: default
+title: Sample Data
+nav_order: 4
+---
+
+## 📁 Sample Data
 
 This directory contains INSERT statements to populate the Archive Box Management Database with realistic test data.
 
