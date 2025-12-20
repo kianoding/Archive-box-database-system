@@ -1,3 +1,10 @@
+---
+layout: default
+title: "Q1-3: Foundation Operations"
+parent: Query Documentation
+nav_order: 1
+---
+
 ## 📋 Foundation Operations (Queries 1-3)
 
 ### Query 01: Record Environmental Temperature
