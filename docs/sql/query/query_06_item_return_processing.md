@@ -14,9 +14,8 @@ nav_order: 3
 **Business Need:** Ensure consistent status updates when items return to the archive, and reduce manual errors
 
 #### Workflow Diagram
-
-![workflow mapping for query 06](../../images/workflow-map-query-06.jpg)
-
+![workflow mapping for query 06](/docs/images/workflow-map-query-06.jpg)
+![workflow mapping for query 06]({{ '/docs/images/workflow-map-query-06.jpg' | relative_url }})
 
 **Automation Logic:**
 - ✅ When Return_DateTime is recorded → Trigger fires
