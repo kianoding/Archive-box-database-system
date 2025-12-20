@@ -14,7 +14,7 @@ nav_order: 4
 **Business Need:** Prevent checkout of fragile items, provide patrons with pre-filtered available inventory
 
 #### Workflow Mapping
-
+![workflow mapping for query 07](/docs/images/workflow-map-query-07.jpg)
 ![workflow mapping for query 07]({{ '/docs/images/workflow-map-query-07.jpg' | relative_url }})
 
 #### Implementation
