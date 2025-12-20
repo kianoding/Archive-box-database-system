@@ -31,7 +31,6 @@ This is a list of less complex queries for the day-to-day report:
 - Registering a new patron to the system
 - Deleting the older record of the archive temperature log
 
-→ [Query 01: Foundational Operation](../query/query_01_foundational_operation.md)
 
 ---
 ## 📋 Applied Operations (Queries 4-5)
@@ -39,15 +38,10 @@ This is a list of queries with mid-level complexity for the daily operation repo
 - Updating the record for pick-up ready boxes
 - Preparing the report for the outbound shipping report
 
-→ [Query 02: Applied Operation](../query//query_02_applied_operational.md)
 
 ---
 ## 📋 Advanced Workflows (Queries 6-8)
 This is a list of production-ready queries demonstrating complex SQL techniques for automated workflows, nested logic, and transaction management:
-
-→ [Query 06: Item Return Processing](../query/query_6_item_return_processing.md)\
-→ [Query 07: Available Items Check](../query/query_7_available_items_check.md)\
-→ [Query 08: Checkout Transaction](../query/query_8_checkout_transaction.md)
 
 
 ## Summary
