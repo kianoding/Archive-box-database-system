@@ -24,25 +24,6 @@ This document showcases SQL query development for the Archive Box Management Dat
 | Q7 | Check available items | Librarian | VIEW creation, nested SUBQUERIES (3 levels) | ⭐⭐⭐⭐ | Advanced |
 | Q8 | Patron checkout transaction | Librarian | TRANSACTION (ACID), multi-step workflow | ⭐⭐⭐⭐⭐ | Advanced |
 
----
-## 📋 Foundation Operations (Queries 1-3)
-This is a list of less complex queries for the day-to-day report:
-- Recording the temperature and humidity in the archive room
-- Registering a new patron to the system
-- Deleting the older record of the archive temperature log
-
-
----
-## 📋 Applied Operations (Queries 4-5)
-This is a list of queries with mid-level complexity for the daily operation report:
-- Updating the record for pick-up ready boxes
-- Preparing the report for the outbound shipping report
-
-
----
-## 📋 Advanced Workflows (Queries 6-8)
-This is a list of production-ready queries demonstrating complex SQL techniques for automated workflows, nested logic, and transaction management:
-
 
 ## Summary
 This query collection demonstrates:
