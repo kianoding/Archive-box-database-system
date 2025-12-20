@@ -148,51 +148,52 @@ This database manages **physical box storage and movement only**. The detailed g
 
 ## 📂 Repository Structure
 ```
-archive-box-management-database/
+archive-box-database-system/
 │
-├── sql/                                # Database implementation scripts
-│   ├── schema/                         # Table creation scripts organized by tier
-│   │   ├── tier1_foundation_tables.sql
-│   │   ├── tier2_dependent_tables.sql
-│   │   └── tier3_operational_tables.sql
-│   ├── triggers/                       # Automated workflow triggers
-│   │   ├── checkout_triggers.sql
-│   │   ├── shipment_triggers.sql
-│   │   └── status_cascade_triggers.sql
-│   └── sample_data/                    # Insert statements for test data
-│       ├── tier1_sample_data.sql
-│       ├── tier2_sample_data.sql
-│       └── tier3_sample_data.sql
+├── docs/                                    # All documentation files
+│   ├── data-dictionary.md                   # Metadata for Tier 1 foundation tables
+│   ├── query_documentation.md               # Query overview and links
+│   ├── sample_data_documentation.md         # Sample data explanation
+│   └── images/                              # Visual documentation
+│       ├── ERD-archive-boxes.png            # Entity-Relationship Diagram
+│       ├── query6_workflow.png              # Q6: Item Return workflow
+│       ├── query7_swimlane.png              # Q7: Available Items workflow
+│       └── query8_workflow.png              # Q8: Checkout Transaction workflow
 │
-├── queries/                            # Stakeholder query scenarios
-│   ├── archivist_queries.sql           # Checkout, shipping, location queries
-│   ├── librarian_queries.sql           # Search, availability, patron queries
-│   ├── administrator_queries.sql       # Reporting, analytics, capacity queries
-│   └── conservator_queries.sql         # Condition, environmental monitoring queries
+├── sql/                                     # Database implementation files
+│   ├── schema/                              # Table creation scripts
+│   │   ├── tier1_foundation_tables.sql      # 9 foundation tables (no dependencies)
+│   │   ├── tier2_dependent_tables.sql       # 5 dependent tables (require Tier 1)
+│   │   └── tier3_operational_tables.sql     # 5 operational tables (require Tiers 1 & 2)
+│   │
+│   ├── sample_data/                         # Test data insert statements
+│   │   ├── sample_data_tier1.sql            # Foundation table data
+│   │   ├── sample_data_tier2.sql            # Dependent table data
+│   │   └── sample_data_tier3.sql            # Operational table data
+│   │
+│   └── query/                               # Query demonstration files
+│       ├── query_01_foundational_operation.md    # Queries 1-3: Basic CRUD
+│       ├── query_02_applied_operational.md       # Queries 4-5: JOINs & workflows
+│       ├── query_06_item_return_processing.md    # Q6: Trigger automation
+│       ├── query_07_available_items_check.md     # Q7: Nested subqueries
+│       └── query_08_checkout_transaction.md      # Q8: ACID transactions
 │
-├── docs/                               # Project documentation
-│   ├── DATA_DICTIONARY.md              # Detailed metadata for Tier 1 tables
-│   ├── QUERY_DOCUMENTATION.md          # Query scenarios and explanations
-│   └── images/                         # Visual documentation
-│       ├── erd_diagram.png             # Entity-Relationship Diagram
-│       └── workflow_diagrams/          # Process flow visualizations
-│
-├── README.md                           # Project overview and documentation
-└── .gitignore                          # Git ignore configuration
+├── README.md                                # Project overview and main documentation
+└── _config.yml                              # GitHub Pages configuration
 ```
 
 
 ## 📄 License
 
-This project is provided for **educational and portfolio review purposes only**.
+This project is provided for educational and portfolio-review purposes only.
 
 ### Usage Restrictions
 * This database system may NOT be used in any production environment without express written permission
 * Commercial use requires explicit authorization from the author
-* Academic study, review, and educational use is permitted
+* Academic study, review, and educational use are permitted
 * Modifications for production deployment require author permission
 
-For permission requests or inquiries, please contact the author.
+For permission requests or inquiries, please get in touch with the author.
 
 ---
 
@@ -210,9 +211,9 @@ This project represents my work in mastering database design principles—from c
 
 ## 🙏 Acknowledgments
 
-* **Course Instructor:** Dr. Monica G. Maceli, Ph.D. - [monicamaceli.com](https://monicamaceli.com/)
+* **Course Instructor:** [Dr. Monica G. Maceli, Ph.D.](https://monicamaceli.com/)
 * **Tools:** MySQL 8.0, DBeaver Community Edition
 * **Methodologies:** E.F. Codd's relational model principles, systematic normalization approach
 * **Design Inspiration:** Real-world university archive collection management workflows
 
-Special thanks to Dr. Maceli for guidance on database design principles, normalization techniques, and fostering a rigorous approach to systematic database development.
+Special thanks to Dr. Maceli for guidance on database design principles and normalization techniques, and for fostering a rigorous approach to systematic database development.
