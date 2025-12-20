@@ -8,67 +8,9 @@
 
 **Complexity:** 3-level nested subqueries to filter by condition, status, and location
 
-#### Query Logic Flow
-```
-┌─────────────────────────────────────────────┐
-│  Start: Emily needs the available item list     │
-└──────────────────┬──────────────────────────┘
-                   │
-         ┌─────────▼──────────┐
-         │  Check Current     │
-         │  Item Conditions   │
-         └─────────┬──────────┘
-                   │
-         ┌─────────▼──────────┐
-         │  JOIN 7 Tables:    │
-         │  - ITEM            │
-         │  - ITEM_TYPE       │
-         │  - BOX             │
-         │  - CULTURAL_CLASS  │
-         │  - CONDITION_TYPE  │
-         │  - ITEM_STATUS     │
-         │  - LOCATION        │
-         └─────────┬──────────┘
-                   │
-         ┌─────────▼──────────┐
-         │  Filter 1:         │
-         │  Item Status =     │
-         │  'Available'       │
-         └─────────┬──────────┘
-                   │
-         ┌─────────▼──────────┐
-         │  Filter 2:         │
-         │  Box Status =      │
-         │  Available (ID=1)  │
-         └─────────┬──────────┘
-                   │
-         ┌─────────▼──────────┐
-         │  Filter 3:         │
-         │  NOT IN            │
-         │  ┌───────────────┐ │
-         │  │ Subquery 1:   │ │
-         │  │ Items WHERE   │ │
-         │  │ Condition =   │ │
-         │  │ ┌───────────┐ │ │
-         │  │ │Subquery 2:│ │ │
-         │  │ │Get ID for │ │ │
-         │  │ │"Requires  │ │ │
-         │  │ │Conserv."  │ │ │
-         │  │ └───────────┘ │ │
-         │  └───────────────┘ │
-         └─────────┬──────────┘
-                   │
-         ┌─────────▼──────────┐
-         │  CREATE VIEW       │
-         │  Available_Items_  │
-         │  For_Checkout      │
-         └─────────┬──────────┘
-                   │
-         ┌─────────▼──────────┐
-         │  Return Results    │
-         │  Sorted by Culture │
-         └────────────────────┘
-```
+#### Workflow Mapping
+
+![workflow mapping for query 07](/docs/images/workflow-map-query-07.jpg)
 
 #### Implementation
 
