@@ -17,6 +17,9 @@ nav_order: 5
 #### Transaction Workflow
 ![workflow mapping for query 08](../../images/workflow-map-query-08.png)
 
+![workflow mapping for query 08](/docs/images/workflow-map-query-08.png)
+![workflow mapping for query 08]({{ '/docs/images/workflow-map-query-08.png' | relative_url }})
+
 **ACID Transaction Components:**
 - **Atomicity:** All three steps succeed or none do
 - **Consistency:** Maintains referential integrity across tables
