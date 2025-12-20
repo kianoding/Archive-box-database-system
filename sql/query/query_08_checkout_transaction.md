@@ -6,67 +6,14 @@
 
 **Business Need:** Ensure all checkout steps succeed together or roll back entirely to prevent data inconsistency
 
+#### Transaction Workflow
+![workflow mapping for query 08](/docs/images/workflow-map-query-08.jpg)
+
 **ACID Transaction Components:**
 - **Atomicity:** All three steps succeed or none do
 - **Consistency:** Maintains referential integrity across tables
 - **Isolation:** Prevents concurrent checkout conflicts
 - **Durability:** Changes persist after COMMIT
-
-#### Transaction Workflow
-```
-┌─────────────┐         ┌──────────────┐         ┌─────────────┐
-│   Patron    │         │  Librarian   │         │  Database   │
-│   (David)   │         │   (Emily)    │         │             │
-└──────┬──────┘         └──────┬───────┘         └──────┬──────┘
-       │                       │                        │
-       │  Requests ITEM007     │                        │
-       │──────────────────────>│                        │
-       │  (Kimono research)    │                        │
-       │                       │                        │
-       │                       │ Verify Patron          │
-       │                       │───────────────────────>│
-       │                       │<───────────────────────│
-       │                       │ (David = ID 4)         │
-       │                       │                        │
-       │                       │ Check Item Status      │
-       │                       │───────────────────────>│
-       │                       │<───────────────────────│
-       │                       │ (Available, BOX004)    │
-       │                       │                        │
-       │                       │ START TRANSACTION;     │
-       │                       │───────────────────────>│
-       │                       │                   ┌────▼────┐
-       │                       │                   │ LOCKED  │
-       │                       │                   └────┬────┘
-       │                       │                        │
-       │                       │ Step 1: Move Box       │
-       │                       │ BOX004 → Study Room    │
-       │                       │───────────────────────>│
-       │                       │                   ✅ Success
-       │                       │                        │
-       │                       │ Step 2: Update Item    │
-       │                       │ Status → Checked Out   │
-       │                       │───────────────────────>│
-       │                       │                   ✅ Success
-       │                       │                        │
-       │                       │ Step 3: Create Record  │
-       │                       │ CHK006 entry           │
-       │                       │───────────────────────>│
-       │                       │                   ✅ Success
-       │                       │                        │
-       │                       │ COMMIT;                │
-       │                       │───────────────────────>│
-       │                       │                   ┌────▼────┐
-       │                       │                   │ UNLOCK  │
-       │                       │                   │ Changes │
-       │                       │                   │ Saved   │
-       │                       │                   └────┬────┘
-       │                       │<───────────────────────│
-       │                       │  Confirmation          │
-       │<──────────────────────│                        │
-       │  Item Ready           │                        │
-       │  Study Room 208       │                        │
-```
 
 #### Implementation
 
@@ -152,12 +99,6 @@ JOIN LOCATION l ON b.Location_ID = l.Location_ID
 WHERE cr.Checkout_ID = 'CHK006';
 ```
 
-**Technical Highlights:**
-- ✅ Transaction ensures atomicity (all-or-nothing execution)
-- ✅ Updates span 3 tables (BOX, ITEM_STATUS_NAME, CHECKOUT_RECORD)
-- ✅ Maintains referential integrity throughout
-- ✅ NULL for Return_DateTime indicates active checkout
-- ✅ Rollback capability if any step fails
 
 **Transaction Safety:**
 ```sql
