@@ -6,8 +6,6 @@
 
 **Business Need:** Prevent checkout of fragile items, provide patrons with pre-filtered available inventory
 
-**Complexity:** 3-level nested subqueries to filter by condition, status, and location
-
 #### Workflow Mapping
 
 ![workflow mapping for query 07](/docs/images/workflow-map-query-07.jpg)
@@ -80,6 +78,26 @@ WHERE isn.Item_Status_Name = 'Available'
 SELECT * FROM Available_Items_For_Checkout
 ORDER BY Classification_Name;
 ```
+
+### Result
+
+### Available Items For Checkout
+
+| Item_ID | Item_Type_Name | Box_ID | Classification_Name | Condition_Name | Handling_Guidance | Box_Location |
+|---------|----------------|--------|---------------------|----------------|-------------------|--------------|
+| ITEM013 | Textiles/Decor | BOX007 | African | Fair | Handle with extra care, provide support | Archive Room 206 |
+| ITEM014 | Costume | BOX007 | African | Fair | Handle with extra care, provide support | Archive Room 206 |
+| ITEM019 | Costume | BOX010 | East Asian | Good | Standard handling with gloves | Archive Room 205 |
+| ITEM020 | Accessories | BOX010 | East Asian | Fair | Handle with extra care, provide support | Archive Room 205 |
+| ITEM011 | Costume | BOX006 | Latin American | Good | Standard handling with gloves | Archive Room 205 |
+| ITEM012 | Costume | BOX006 | Latin American | Fair | Handle with extra care, provide support | Archive Room 205 |
+| ITEM005 | Costume | BOX003 | South Asian | Good | Standard handling with gloves | Archive Room 205 |
+| ITEM006 | Accessories | BOX003 | South Asian | Fair | Handle with extra care, provide support | Archive Room 205 |
+| ITEM001 | Costume | BOX001 | Western European | Good | Standard handling with gloves | Archive Room 205 |
+| ITEM002 | Accessories | BOX001 | Western European | Good | Standard handling with gloves | Archive Room 205 |
+
+10 items available for patron checkout (excludes items requiring conservation)
+
 
 **Technical Highlights:**
 - ✅ 7-table JOIN for comprehensive item details
