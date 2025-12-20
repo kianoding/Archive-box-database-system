@@ -1,3 +1,9 @@
+---
+layout: default
+title: Data Dictionary
+nav_order: 3
+---
+
 ## 📖 Data Dictionary
 This document provides detailed metadata specifications for the Archive Box Management Database foundation tables (Tier 1). Each entry follows library and information science metadata standards, documenting attributes, data types, constraints, and contextual examples.
 
