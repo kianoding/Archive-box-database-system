@@ -1,13 +1,4 @@
 # Archive-box-database-system 📦👘🔍
----
-
-## Table of Contents
-{: .no_toc .text-delta }
-
-- TOC
-{:toc}
-
----
 
 ## 📖 Overview
 
