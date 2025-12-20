@@ -20,7 +20,7 @@ This document showcases SQL query development for the Archive Box Management Dat
 | Q4 | Update box for shipment | Archivist | UPDATE with JOINs, multi-table verification | ⭐⭐ | 2️⃣ Applied Operations |
 | Q5 | Track external shipment | Archivist | INSERT with FK relationships, complex SELECT | ⭐⭐ | 2️⃣ Applied Operations |
 | Q6 | Process item return | Librarian | TRIGGER, cascading updates, automated workflow | ⭐⭐⭐ | Advanced |
-| Q7 | Check available items | Patron/Librarian | VIEW creation, nested SUBQUERIES (3 levels) | ⭐⭐⭐⭐ | Advanced |
+| Q7 | Check available items | Librarian | VIEW creation, nested SUBQUERIES (3 levels) | ⭐⭐⭐⭐ | Advanced |
 | Q8 | Patron checkout transaction | Librarian | TRANSACTION (ACID), multi-step workflow | ⭐⭐⭐⭐⭐ | Advanced |
 
 ---
