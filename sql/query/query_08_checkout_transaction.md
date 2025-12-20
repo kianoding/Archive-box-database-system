@@ -7,7 +7,7 @@
 **Business Need:** Ensure all checkout steps succeed together or roll back entirely to prevent data inconsistency
 
 #### Transaction Workflow
-![workflow mapping for query 08](/docs/images/workflow-map-query-08.jpg)
+![workflow mapping for query 08](/docs/images/workflow-map-query-08.png)
 
 **ACID Transaction Components:**
 - **Atomicity:** All three steps succeed or none do
