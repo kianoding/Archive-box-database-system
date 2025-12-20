@@ -3,15 +3,17 @@ layout: default
 title: Home
 nav_order: 1
 ---
-# Archive-box-database-system 📦👘🔍
+
+# Archive Box Management Database: Garment and Textile
 
 ## Table of Contents
 {: .no_toc .text-delta }
 
-- TOC
+1. TOC
 {:toc}
 
 ---
+
 
 ## 📖 Overview
 
