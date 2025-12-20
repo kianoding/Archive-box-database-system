@@ -1,3 +1,10 @@
+---
+layout: default
+title: "Q6: Item Return Processing"
+parent: Query Documentation
+nav_order: 3
+---
+
 ## 📋 Advanced Workflows (Queries 6)
 
 ### Query 6: Automated Item Return Processing
