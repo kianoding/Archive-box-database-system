@@ -15,7 +15,7 @@ nav_order: 4
 
 #### Workflow Mapping
 
-![workflow mapping for query 07](/docs/images/workflow-map-query-07.jpg)
+![workflow mapping for query 07](../../images/workflow-map-query-07.jpg)
 
 #### Implementation
 
