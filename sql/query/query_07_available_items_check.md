@@ -1,3 +1,10 @@
+---
+layout: default
+title: "Q7: Available Items Check"
+parent: Query Documentation
+nav_order: 4
+---
+
 ## 📋 Advanced Workflows (Queries 7)
 
 ### Query 7: Check Available Items for Patron Checkout
