@@ -15,8 +15,6 @@ nav_order: 5
 **Business Need:** Ensure all checkout steps succeed together or roll back entirely to prevent data inconsistency
 
 #### Transaction Workflow
-![workflow mapping for query 08](../../images/workflow-map-query-08.png)
-
 ![workflow mapping for query 08](/docs/images/workflow-map-query-08.png)
 ![workflow mapping for query 08]({{ '/docs/images/workflow-map-query-08.png' | relative_url }})
 
