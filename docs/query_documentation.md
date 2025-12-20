@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Query Documentation
-nav_order: 4
+nav_order: 2
 ---
 
 # 💬 Query Documentation
