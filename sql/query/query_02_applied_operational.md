@@ -1,3 +1,10 @@
+---
+layout: default
+title: "Q4-5: Applied Operations"
+parent: Query Documentation
+nav_order: 2
+---
+
 ## 📋 Applied Operations (Queries 4-5)
 
 ### Query 04: Update Box Location for Shipment
