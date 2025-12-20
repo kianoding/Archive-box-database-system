@@ -96,7 +96,7 @@ This database serves four primary user groups within the university archive:
 ## 🗄️ Data Dictionary
 Comprehensive metadata documentation for all foundation tables, including attribute definitions, data types, and example values.
 
-**[→ View Complete Data Dictionary](sql/schema/data-dictionary.md)**
+**[→ View Complete Data Dictionary](sql/schema/data-dictionary.html)**
 
 ---
 
@@ -109,7 +109,7 @@ This project includes **15+ complex queries** demonstrating advanced SQL techniq
 - **View-Based Operations**: Complex joins for stakeholder-specific data access
 - **Conditional Logic**: Environmental monitoring with alert thresholds
 
-**📋 [View Complete Query Documentation →](sql/query/query_documentation.md)**
+**📋 [View Complete Query Documentation →](sql/query/query_documentation.html)**
 
 *Queries organized by stakeholder role: Archivist, Librarian, Administrator, Conservator*
 
