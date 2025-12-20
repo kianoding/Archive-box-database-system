@@ -2,7 +2,6 @@
 layout: default
 title: Data Dictionary
 nav_order: 3
-has_children: true
 ---
 
 
