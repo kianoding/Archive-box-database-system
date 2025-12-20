@@ -15,7 +15,7 @@ nav_order: 3
 
 #### Workflow Diagram
 
-![workflow mapping for query 06](/docs/images/workflow-map-query-06.jpg)
+![workflow mapping for query 06](../../images/workflow-map-query-06.jpg)
 
 
 **Automation Logic:**
