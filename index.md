@@ -1,5 +1,9 @@
-# Archive-box-database-system 📦👘🔍
 ---
+layout: default
+title: Home
+nav_order: 1
+---
+# Archive-box-database-system 📦👘🔍
 
 ## Table of Contents
 {: .no_toc .text-delta }
