@@ -94,7 +94,7 @@ This project includes **15+ complex queries** demonstrating advanced SQL techniq
 - **View-Based Operations**: Complex joins for stakeholder-specific data access
 - **Conditional Logic**: Environmental monitoring with alert thresholds
 
-**📋 [View Complete Query Documentation →](sql/query/query_documentation.md)**
+**📋 [View Complete Query Documentation →](docs/query_documentation.md)**
 
 *Queries organized by stakeholder role: Archivist, Librarian, Administrator, Conservator*
 
@@ -137,31 +137,28 @@ archive-box-database-system/
 │   ├── data-dictionary.md                   # Metadata for Tier 1 foundation tables
 │   ├── query_documentation.md               # Query overview and links to detailed pages
 │   ├── sample_data_documentation.md         # Sample data explanation and usage
-│   │
-│   ├── images/                              # Visual documentation
-│   │   ├── ERD-archive-boxes.png            # Entity-Relationship Diagram
-│   │   ├── query6_workflow.png              # Q6: Item Return workflow
-│   │   ├── query7_swimlane.png              # Q7: Available Items workflow
-│   │   └── query8_workflow.png              # Q8: Checkout Transaction workflow
-│   │
-│   └── sql/                                 # Database implementation files
-│       ├── schema/                          # Table creation scripts
-│       │   ├── tier1_foundation_tables.sql  # 9 foundation tables (no dependencies)
-│       │   ├── tier2_dependent_tables.sql   # 5 dependent tables (require Tier 1)
-│       │   └── tier3_operational_tables.sql # 5 operational tables (require Tiers 1 & 2)
-│       │
-│       ├── sample_data/                     # Test data insert statements
-│       │   ├── sample_data_tier1.sql        # Foundation table data
-│       │   ├── sample_data_tier2.sql        # Dependent table data
-│       │   └── sample_data_tier3.sql        # Operational table data
-│       │
-│       └── query/                           # Query demonstration files
-│           ├── query_01_foundational_operation.md    # Queries 1-3: Basic CRUD
-│           ├── query_02_applied_operational.md       # Queries 4-5: JOINs & workflows
-│           ├── query_06_item_return_processing.md    # Q6: Trigger automation
-│           ├── query_07_available_items_check.md     # Q7: Nested subqueries
-│           └── query_08_checkout_transaction.md      # Q8: ACID transactions
-│
+│   ├── sql/                                 # Database implementation files
+│   │   ├── schema/                          # Table creation scripts
+│   │   │   ├── tier1_foundation_tables.sql  # 9 foundation tables (no dependencies)
+│   │   │   ├── tier2_dependent_tables.sql   # 5 dependent tables (require Tier 1)
+│   │   │   └── tier3_operational_tables.sql # 5 operational tables (require Tiers 1 & 2)
+│   │   │
+│   │   ├── sample_data/                     # Test data insert statements
+│   │   │   ├── sample_data_tier1.sql        # Foundation table data
+│   │   │   ├── sample_data_tier2.sql        # Dependent table data
+│   │   │   └── sample_data_tier3.sql        # Operational table data
+│   │   │
+│   │   └── query/                           # Query demonstration files
+│   │       ├── query_01_foundational_operation.md    # Queries 1-3: Basic CRUD
+│   │       ├── query_02_applied_operational.md       # Queries 4-5: JOINs & workflows
+│   │       ├── query_06_item_return_processing.md    # Q6: Trigger automation
+│   │       ├── query_07_available_items_check.md     # Q7: Nested subqueries
+│   │       └── query_08_checkout_transaction.md      # Q8: ACID transactions
+│   └── images/                              # Visual documentation
+│       ├── ERD-archive-boxes.png            # Entity-Relationship Diagram
+│       ├── query6_workflow.png              # Q6: Item Return workflow
+│       ├── query7_swimlane.png              # Q7: Available Items workflow
+│       └── query8_workflow.png              # Q8: Checkout Transaction workflow
 ├── index.md                                 # Project homepage (main entry point)
 └── _config.yml                              # GitHub Pages configuration
 ```
@@ -174,7 +171,7 @@ This project is provided for educational and portfolio-review purposes only.
 * Academic study, review, and educational use are permitted
 * Modifications for production deployment require author permission
 
-For permission requests or inquiries, please get in touch with the author.
+If you have any permission requests or questions, please contact the author.
 
 ---
 
